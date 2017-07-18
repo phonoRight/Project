@@ -6,7 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producer extends Model
 {
-    protected $fillable = ['firstname','lastname','birthday','location','description', 'sound_bodies_id', 'bands_id', 'solo_artists_id']; // ?
+    protected $fillable = ['firstname','lastname','companyname', 'executive_producing','location','description', 'social_id', 'genre_id'];
 
-// sm, generes
+    // Relation: Producer - Social Media (m:n)
+
+    public function social_media()
+    {
+        return $this->belongsToMany('App/SocialMedia', 'social_id', 'id');
+    }
+
+    // Relation: Producer - Social Media (m:n)
+
+    public function genres(){
+        $this->belongsToMany('App/Genre', 'genre_producer', 'genre_id', 'id');
+    }
 }
