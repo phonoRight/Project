@@ -14,7 +14,7 @@ class CreateFreelanceAudioEngineersTable extends Migration
     public function up()
     {
         Schema::create('freelance_audio_engineers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('audio_engineer_id');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('location');

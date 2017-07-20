@@ -6,32 +6,44 @@ use Illuminate\Database\Eloquent\Model;
 
 class Musician extends Model
 {
-    protected $fillable = ['firstname','lastname','birthday','location','description', 'genre_id', 'band_id', 'solo_artist_id', 'sound_body_id'];
+    protected $fillable = ['firstname','lastname','birthday','location','description', 'social_media_id', 'genre_id', 'band_id', 'solo_artist_id', 'sound_body_id'];
 
     //Relation: User - Musician (1:n)
 
-    public function user(){
-        $this->belongsTo('App/User');
+    public function user()
+    {
+       return $this->belongsTo('App/User');
     }
 
     //Relation: Musician - Genres (m:n)
 
-    public function genres(){
-        $this->belongsToMany('App/Genre', 'genre_musician', 'genre_id', 'id');
+    public function genres()
+    {
+       return $this->belongsToMany('App/Genre', 'genre_musician', 'genre_id', 'id');
     }
 
-    // Relation: Musician - Interpret (m:n)
+    //Relation: Musician - Social Media (m:n)
 
-    public function bands(){
-        $this->belongsToMany('App/Band', 'band_musician', 'band_id', 'id');
+    public function social_media()
+    {
+        return $this->belongsToMany('App/SocialMedia', 'musician_social', 'social_media_id', 'social_media_id');
     }
 
-    public function solo_artists(){
-        $this->belongsToMany('App/SoloArtist', 'musician_solo', 'solo_artist_id', 'id');
+    //Relation: Musician - Interpret (m:n)
+
+    public function bands()
+    {
+       return $this->belongsToMany('App/Band', 'band_musician', 'band_id', 'id');
     }
 
-    public function sound_bodies(){
-        $this->belongsToMany('App/SoundBody', 'musician_sound', 'sound_body_id', 'id');
+    public function solo_artists()
+    {
+       return $this->belongsToMany('App/SoloArtist', 'musician_solo', 'solo_artist_id', 'id');
+    }
+
+    public function sound_bodies()
+    {
+       return $this->belongsToMany('App/SoundBody', 'musician_sound', 'sound_body_id', 'id');
     }
 
 }

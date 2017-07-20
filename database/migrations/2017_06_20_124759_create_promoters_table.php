@@ -14,7 +14,7 @@ class CreatePromotersTable extends Migration
     public function up()
     {
         Schema::create('promoters', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('promoter_id');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('companyname');

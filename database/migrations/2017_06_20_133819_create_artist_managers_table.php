@@ -14,7 +14,7 @@ class CreateArtistManagersTable extends Migration
     public function up()
     {
         Schema::create('artist_managers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('artist_manager_id');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('companyname');

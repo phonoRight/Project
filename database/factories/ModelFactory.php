@@ -21,3 +21,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Musician::class, function (Faker\Generator $faker) {
+
+    return [
+        'firstname' => $faker->firstName,
+        'lastname' => $faker->lastName,
+        'birthday' => $faker->dateTime,
+        'location' => $faker->city,
+        'description' => $faker->sentence(10),
+        'social_media_id' => $faker->numberBetween(1,3)
+    ];
+});

@@ -14,7 +14,7 @@ class CreateInstrumentsTable extends Migration
     public function up()
     {
         Schema::create('instruments', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('instruments_id');
             $table->string('name');
         });
     }

@@ -14,7 +14,7 @@ class CreateSoloArtistsTable extends Migration
     public function up()
     {
         Schema::create('solo_artists', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('solo_artist_id');
             $table->string('name');
             $table->string('location');
             $table->string('description');

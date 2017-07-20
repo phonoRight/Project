@@ -15,9 +15,10 @@ class Producer extends Model
         return $this->belongsToMany('App/SocialMedia', 'social_id', 'id');
     }
 
-    // Relation: Producer - Social Media (m:n)
+    // Relation: Producer - Genres (m:n)
 
-    public function genres(){
-        $this->belongsToMany('App/Genre', 'genre_producer', 'genre_id', 'id');
+    public function genres()
+    {
+        return $this->belongsToMany('App/Genre', 'genre_producer', 'genre_id', 'id');
     }
 }

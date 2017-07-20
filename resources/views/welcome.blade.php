@@ -74,9 +74,11 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                <table>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>

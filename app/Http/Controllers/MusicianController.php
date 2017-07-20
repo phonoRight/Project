@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Musician;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MusicianController extends Controller
 {
@@ -13,7 +15,7 @@ class MusicianController extends Controller
      */
     public function index()
     {
-        //
+        return Musician::with('social_media')->get();
     }
 
     /**
@@ -32,9 +34,17 @@ class MusicianController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) // First/Lastname or Pseudonym
     {
-        //
+        $this->validate($request, [
+            'firstname' => 'required',
+            'lastname'  => 'required',
+            'birthday'  => 'required',
+            'location'  => '',
+            'description' => ''
+        ]);
+
+        Musician::create($request->all());
     }
 
     /**

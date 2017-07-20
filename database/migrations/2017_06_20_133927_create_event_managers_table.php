@@ -14,7 +14,7 @@ class CreateEventManagersTable extends Migration
     public function up()
     {
         Schema::create('event_managers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('event_manager_id');
             $table->string('companyname');
             $table->string('location');
             $table->string('description');

@@ -14,7 +14,7 @@ class CreateSoundBodiesTable extends Migration
     public function up()
     {
         Schema::create('sound_bodies', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('sound_body_id');
             $table->string('name');
             $table->string('location');
             $table->string('description');

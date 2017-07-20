@@ -14,12 +14,12 @@ class CreateMusiciansTable extends Migration
     public function up()
     {
         Schema::create('musicians', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('musician_id');
             $table->string('firstname');
             $table->string('lastname');
             $table->date('birthday');
             $table->string('location');
-            $table->string('description');
+            $table->text('description');
             $table->timestamps();
         });
     }

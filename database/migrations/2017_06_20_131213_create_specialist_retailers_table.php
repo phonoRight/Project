@@ -14,7 +14,7 @@ class CreateSpecialistRetailersTable extends Migration
     public function up()
     {
         Schema::create('specialist_retailers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('retail_id');
             $table->string('companyname');
             $table->string('type');
             $table->string('sector');

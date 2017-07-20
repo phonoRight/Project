@@ -14,7 +14,7 @@ class CreateRecordCompaniesTable extends Migration
     public function up()
     {
         Schema::create('record_companies', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('record_company_id');
             $table->string('companyname');
             $table->string('UID');
             $table->char('ISRC');

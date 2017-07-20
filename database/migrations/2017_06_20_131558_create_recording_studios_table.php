@@ -14,7 +14,7 @@ class CreateRecordingStudiosTable extends Migration
     public function up()
     {
         Schema::create('recording_studios', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('studio_id');
             $table->string('companyname');
             $table->string('location');
             $table->string('type');

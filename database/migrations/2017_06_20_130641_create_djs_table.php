@@ -14,7 +14,7 @@ class CreateDjsTable extends Migration
     public function up()
     {
         Schema::create('djs', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('dj_id');
             $table->string('name');
             $table->string('type');
             $table->string('location');

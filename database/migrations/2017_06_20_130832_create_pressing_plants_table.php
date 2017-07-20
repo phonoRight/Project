@@ -14,7 +14,7 @@ class CreatePressingPlantsTable extends Migration
     public function up()
     {
         Schema::create('pressing_plants', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('pressing_plant_id');
             $table->string('companyname');
             $table->string('type');
             $table->string('pressing');
