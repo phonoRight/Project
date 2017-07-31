@@ -8,27 +8,40 @@ class Band extends Model
 {
     //sm, genres, label, mngmt id / band - musician (n:m) -zwischentabelle-
 
-    protected $fillable = ['name', 'location', 'description', 'social_id', 'genre_id', 'musician_id'];
+    protected $fillable = ['name', 'location', 'description', 'social_media_id', 'genres_id', 'musician_id'];
 
+    //Relation: Band - Labels (1:n)
+
+    public function label()
+    {
+        return $this->belongsTo('App/Label');
+    }
+
+    //Relations: Band - Artist Manager (1:n)
+
+    public function artist_manager()
+    {
+        return $this->belongsTo('App/ArtistManager');
+    }
 
     //Relation: Band - Genres (m:n)
 
     public function genres()
     {
-        return $this->belongsToMany('App/Genre', 'genre_musician', 'genre_id', 'id');
+        return $this->belongsToMany('App/Genre', 'genre_musician', 'genres_id', 'genres_id');
     }
 
-    //Relation: Producer - Social Media (m:n)
+    //Relation: Band - Social Media (m:n)
 
     public function social_media()
     {
-        return $this->belongsToMany('App/SocialMedia', 'social_id', 'id');
+        return $this->belongsToMany('App/SocialMedia', 'social_media_id', 'social_media_id');
     }
 
     //Relation: Band - Musician (m:n)
 
     public function musicians()
     {
-        return $this->belongsToMany('App/Musician', 'musician_id', 'id');
+        return $this->belongsToMany('App/Musician', 'musician_id', 'musician_id');
     }
 }

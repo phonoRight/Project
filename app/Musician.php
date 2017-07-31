@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Musician extends Model
 {
-    protected $fillable = ['firstname','lastname','birthday','location','description', 'social_media_id', 'genre_id', 'band_id', 'solo_artist_id', 'sound_body_id'];
+    protected $fillable = ['firstname','lastname','birthday','location','description', 'social_media_id', 'genres_id', 'band_id', 'solo_artist_id', 'sound_body_id'];
 
     //Relation: User - Musician (1:n)
 
@@ -19,7 +19,7 @@ class Musician extends Model
 
     public function genres()
     {
-       return $this->belongsToMany('App/Genre', 'genre_musician', 'genre_id', 'id');
+       return $this->belongsToMany('App/Genre', 'genre_musician', 'genres_id', 'genres_id');
     }
 
     //Relation: Musician - Social Media (m:n)
@@ -38,12 +38,12 @@ class Musician extends Model
 
     public function solo_artists()
     {
-       return $this->belongsToMany('App/SoloArtist', 'musician_solo', 'solo_artist_id', 'id');
+       return $this->belongsToMany('App/SoloArtist', 'musician_solo', 'solo_artist_id', 'solo_artist_id');
     }
 
     public function sound_bodies()
     {
-       return $this->belongsToMany('App/SoundBody', 'musician_sound', 'sound_body_id', 'id');
+       return $this->belongsToMany('App/SoundBody', 'musician_sound', 'sound_body_id', 'sound_body_id');
     }
 
 }
