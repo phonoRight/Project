@@ -33,7 +33,7 @@ class Musician extends Model
 
     public function bands()
     {
-       return $this->belongsToMany('App/Band', 'band_musician', 'band_id', 'id');
+       return $this->belongsToMany('App/Band', 'band_musician', 'band_id', 'band_id');
     }
 
     public function solo_artists()
