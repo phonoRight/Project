@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dj extends Model
 {
     // sm, genres
+
     protected $fillable = ['name', 'type', 'location', 'description', 'social_media_id', 'genres_id'];
 
     //Relation: DJ - Social Media (m:n)
@@ -21,5 +22,12 @@ class Dj extends Model
     public function genres()
     {
         return $this->belongsToMany('App/Genre', 'genre_musician', 'genres_id', 'genres_id');
+    }
+
+    //Relation: User - DJ (1:n)
+
+    public function user()
+    {
+        return $this->belongsTo('App/User');
     }
 }

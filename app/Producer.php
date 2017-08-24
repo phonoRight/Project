@@ -15,7 +15,6 @@ class Producer extends Model
         return $this->belongsTo('App/User');
     }
 
-
     // Relation: Producer - Social Media (m:n)
 
     public function social_media()

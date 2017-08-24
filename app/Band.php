@@ -10,6 +10,16 @@ class Band extends Model
 
     protected $fillable = ['name', 'location', 'description', 'social_media_id', 'genres_id', 'musician_id'];
 
+    /*
+     * Relation: User - Band (1:n)
+     * Only one can create/add a Band and is therefore the admin. Band Members are granted rights by the admin.
+     */
+
+    public function user()
+    {
+        return $this->belongsTo('App/User');
+    }
+
     //Relation: Band - Labels (1:n)
 
     public function label()
