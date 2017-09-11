@@ -20,12 +20,12 @@ class CreateMusiciansTable extends Migration
             $table->date('birthday');
             $table->string('location');
             $table->text('description');
-            $table->foreign('social_media_id')->references('social_media_id')->on('social_media');
-            $table->foreign('genre_id')->references('genres_id')->on('genres');
+          /*$table->foreign('social_media_id')->references('social_media_id')->on('social_media');
+            $table->foreign('genres_id')->references('genres_id')->on('genres');
             $table->foreign('band_id')->references('band_id')->on('bands');
             $table->foreign('sound_body_id')->references('sound_body_id')->on('sound_bodies');
             $table->foreign('solo_artist_id')->references('solo_artist_id')->on('solo_artists');
-            $table->timestamps();
+            */$table->timestamps();
         });
     }
 
