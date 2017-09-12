@@ -13,7 +13,7 @@ class AddForeignKeyRCompany extends Migration
      */
     public function up()
     {
-        Schema::table('recording_companies', function (Blueprint $table){
+        Schema::table('record_companies', function (Blueprint $table){
             $table->unsignedInteger('social_media_id');
             $table->foreign('social_media_id')->references('social_media_id')->on('social_media');
         });

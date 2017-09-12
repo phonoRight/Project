@@ -20,7 +20,7 @@ class CreateProducersTable extends Migration
             $table->string('companyname');
             $table->boolean('executive_producing');
             $table->string('location');
-            $table->string('description');
+            $table->text('description');
             $table->timestamps();
         });
     }
