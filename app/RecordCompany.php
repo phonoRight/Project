@@ -8,7 +8,7 @@ class RecordCompany extends Model
 {
     //sm
 
-    protected $fillable = ['companyname', 'UID', 'ISRC', 'location', 'description', 'social_media_id', 'user_id'];
+    protected $fillable = ['companyname', 'UID', 'ISRC', 'location', 'description', 'social_media_id'];
 
     //Relation: User - R. Company (1:n)
 
