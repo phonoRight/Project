@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ArtistManager;
 use Illuminate\Http\Request;
 
 class ArtistManagerController extends Controller
@@ -34,7 +35,11 @@ class ArtistManagerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     $this->validate($request, [
+         'firstname' => 'required|min:3',
+         'lastname' => 'required|min:3',
+         'companyname' => 'required',
+     ]);
     }
 
     /**
@@ -79,6 +84,7 @@ class ArtistManagerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        ArtistManager::destroy($id);
+        return response()->json('Deletion completed.');
     }
 }
