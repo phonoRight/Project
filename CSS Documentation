@@ -2,6 +2,9 @@
 .fb: FB Anmeldebutton
 style.css, 116;
 
+.pr:
+style.css, 122:
+
 /*----------------------Input---------------------*/
 .search: Suchleiste für Startseite + Dashboard
 style.css, 57;

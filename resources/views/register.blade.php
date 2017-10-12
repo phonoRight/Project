@@ -8,15 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Anmelden</title>
+    <link rel="stylesheet" href="../css/font-awesome.css">
     <link rel="stylesheet" href="../css/materialize.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <nav class="header">
-        <div class="nav-wrapper">
+        <div class="nav-wrapper row">
             <img class="responsive-img" src="http://via.placeholder.com/200x80">
             <div>
-                <input class="search" type="search">
+                <input class="search s12 m12" type="search">
             </div>
         </div>
     </nav>
@@ -34,7 +35,9 @@
                     <br>
                     <form>
                         <div class="center">
-                            <button class="btn fb" type="submit">Über Facebook anmelden</button>
+                            <button class="btn fb" type="submit">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                &nbsp;&nbsp;Anmelden mit Facebook</button>
                         </div>
                         <br>
                         <br>
@@ -45,13 +48,14 @@
                         </div>
                         <br>
                         <br>
-                        <label>Username</label>
-                        <input type="text" class="register-input">
-                        <label>E-mail</label>
-                        <input type="email" class="register-input">
-                        <label>Passwort</label>
-                        <input type="password" class="register-input">
-                        <button class="btn">Konto erstellen</button>
+
+                        <input placeholder="&nbsp;&nbsp;Username" type="text" class="register-input">
+
+                        <input placeholder="&nbsp;&nbsp;E-Mail" type="email" class="register-input">
+
+                        <input placeholder="&nbsp;&nbsp;Passwort" type="password" class="register-input">
+
+                        <button class="btn pr">Konto erstellen</button>
                     </form>
                 </div>
             </div>
