@@ -1,13 +1,23 @@
 /*----------------------Buttons---------------------*/
-
+.fb: FB Anmeldebutton
+style.css, 116;
 
 /*----------------------Input---------------------*/
 .search: Suchleiste für Startseite + Dashboard
 style.css, 57;
 
-/*----------------------Body (Background)---------------------*/
+.register-input: Registrier Inputs
+style.css, 112;
 
+/*----------------------Body (Background)---------------------*/
+body: Body
+style.css, 82;
 
 /*----------------------Header---------------------*/
 .header: Header
 style.css, 51;
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.lines: Linien für die Registrierkarte
+style.css, 120;
