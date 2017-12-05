@@ -1,26 +1,18 @@
+/*--------------------------------------------- style.css ------------------------------------------------------------*/
+
+.lines: Linien für die Registrierkarte
+.header: Header
+.body: Body
+
 /*----------------------Buttons---------------------*/
 .fb: FB Anmeldebutton
-style.css, 116;
-
-.pr:
-style.css, 122:
+.pr: Registrierbutton
 
 /*----------------------Input---------------------*/
 .search: Suchleiste für Startseite + Dashboard
-style.css, 57;
-
 .register-input: Registrier Inputs
-style.css, 112;
 
-/*----------------------Body (Background)---------------------*/
-body: Body
-style.css, 82;
 
-/*----------------------Header---------------------*/
-.header: Header
-style.css, 51;
+JWT CONFIG: config/jwt.php
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-
-.lines: Linien für die Registrierkarte
-style.css, 120;
+Avatar: Avatarbild für Posts
