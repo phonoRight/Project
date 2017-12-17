@@ -1,14 +1,13 @@
-<div ng-controller="RegisterController">
 <div class="row">
     <div class="col m7 l7"></div>
-    <div class="col s12 m4 l4">
+    <div class="col s12 m4 l4" ng-controller="APIController">
         <div class="card">
             <div class="card-content">
-                <h3>Registieren</h3>
+                <h3>Login</h3>
                 <h5>phonoRight. Die Elite im Musikbusiness.</h5>
                 <br>
                 <br>
-                <form>
+                <form action="/">
                     <div class="center">
                         <button class="btn fb" type="submit">
                             <i class="fa fa-facebook-official" aria-hidden="true"></i>
@@ -24,24 +23,14 @@
                     <br>
                     <br>
 
-                    <input placeholder="&nbsp;&nbsp;Vorname" type="text" class="register-input">
+                    <input placeholder="&nbsp;&nbsp;Vorname" name="firstname" type="text" ng-model="firstname" class="register-input">
+                    <input placeholder="&nbsp;&nbsp;Nachname" name="lastname" type="text" ng-model="lastname" class="register-input">
+                    <input placeholder="&nbsp;&nbsp;Passwort" name="password" type="password" ng-model="password" class="register-input">
 
-                    <input placeholder="&nbsp;&nbsp;Nachname" type="text" class="register-input">
-
-                    <input placeholder="&nbsp;&nbsp;E-Mail" type="email" class="register-input">
-
-                    <input placeholder="&nbsp;&nbsp;Passwort" type="password" class="register-input">
-
-                    <button class="btn pr">Konto erstellen</button>
+                    <button class="btn pr" ng-click='login()'>Anmelden</button>
                 </form>
-                <br>
-                <p>Du hast bereits einen Account? Logge dich <a href="/login">hier</a> ein.</p>
             </div>
         </div>
     </div>
     <div class="col m1 l1"></div>
-    </div>
-    <br>
-    <br>
-    <br>
 </div>

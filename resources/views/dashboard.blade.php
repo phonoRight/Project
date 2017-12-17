@@ -1,5 +1,5 @@
 @verbatim
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en" ng-app="Phono">
 <head>
     <meta lang="de">
